@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: redis-demo
+  redis:
+    cluster:
+      nodes: 192.168.10.7:7001,192.168.10.7:7002,192.168.10.7:7003,192.168.10.7:7004,192.168.10.7:7005,192.168.10.7:7006
+      max-redirects: 3
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 10000
+    database: 0
+#    sentinel:
+#      master: mymaster
+#      nodes: 192.168.10.178:26379,192.168.10.178:26400
+    password:
+server:
+  port: 10001
